@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Patrick+Hand&display=swap');
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px dashed #d1c7bd;
+    justify-content: center;
+}
+
+/* Título con estilo de letra a mano */
+.titulo-manuscrito {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    color: #3a332c;
+    margin: 5px 0 0 0;
+    line-height: 1;
+}
+
+.subtitulo-semana {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    color: #7a6e65;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.header-titulos{
+    text-align: center;
+}
+
+
+/* Nota adhesiva / Post-it a la derecha */
+.postit-rapido {
+    background-color: #fff2a8;
+    padding: 10px 15px;
+    border-radius: 2px;
+    box-shadow: 2px 3px 6px rgba(0,0,0,0.1);
+    transform: rotate(2deg);
+    max-width: 200px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1rem;
+    color: #4a4238;
+}
+
+
+.seccion-crear{
+    background-color: #f9f5f0;
+    border: 1px dashed #d1c7bd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.03);
+    margin:5px;
+}
+
+.seccion-crear h2{
+    font-family:'Patrick Hand', cursive;
+    font-size: 2.5rem;
+    color: #4a3e3d;
+    margin-bottom: 15px;
+}
+
+.form-tarea{
+    display: flex;
+    gap: 10px;
+}
+
+.form-tarea input[type="text"]{
+    flex:1;
+    padding: 10px 14px;
+    border:1px solid #e0d6cb;
+    border-radius:6px;
+    font-size:1rem;
+    outline:none;
+    background-color:#faf8f5;
+    transition: border-color 0.3s;
+}
+
+.form-tarea input[type="text"]:focus {
+    border-color: #a89788;
+}
+
+.form-tarea button{
+    background-color:#7b9e87;
+    color:white;
+    border:none;
+    border-radius:6px;
+    padding:10px 20px;
+    font-weight:bold;
+    font-size: 0.95rem;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+.form-tarea button:hover {
+    background-color: #64846f;
+}
+
+/* LISTA DE TAREAS */
+.seccion-lista{
+    background-color:#fffefb;
+    border:1px solid #e2d9cd;
+    border-radius:8px;
+    padding:20px;
+    margin:5px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.03);
+}
+
+.seccion-lista h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2.5rem;
+    color: #4a3e3d;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f2ece4;
+    padding-bottom: 8px;
+}
+
+.lista-tareas{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tarea-item:hover {
+    background-color: #f5f0e8;
+}
+.tarea-label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor: pointer;
+    color: #3d352e;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+}
+.tarea-label input[type="checkbox"]:checked + .texto-tarea {
+    text-decoration: line-through;
+    color: #a3998e;
+}
+
