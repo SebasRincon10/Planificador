@@ -24,10 +24,10 @@
     </div>
     </header>
     <div class="container d-flex flex-wrap justify-content-center">
-    <div class="contenedor-principal col-12 col-lg-6">
+    <div class="contenedor-principal col-12 col-lg-4">
     <section class="seccion-crear">
         <h2>✏️ Nueva Tarea</h2>
-        <form id="formTarea" class="form-tarea">
+        <form id="formTarea" class="form-tarea d-flex flex-column">
             <input 
                 type="text" 
                 id="inputTarea" 
@@ -35,11 +35,27 @@
                 required 
                 autocomplete="off"
             >
+            <input 
+                type="date" 
+                id="inputTarea"     
+                placeholder="Fecha de Entrega" 
+                required 
+                autocomplete="off"
+            >
+            <input 
+                type="text" 
+                id="inputTarea" 
+                placeholder="Estado" 
+                required 
+                autocomplete="off"
+            >
+            <textarea id="inputTarea" placeholder="Descripción de la tarea..." required autocomplete="off">
+            </textarea>
             <button type="submit" id="btnAgregar">Agregar</button>
         </form> 
     </section>
     </div>
-    <div class="contenedor-principal col-12 col-lg-6">
+    <div class="contenedor-principal col-12 col-lg-8">
     <section class="seccion-lista">
         <h2>📋 Mis Pendientes</h2>
         <ul id="listaTareas" class="lista-tareas">

@@ -52,6 +52,8 @@ header {
     padding: 20px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.03);
     margin:5px;
+    height:auto;
+    min-height: fit-content;
 }
 
 .seccion-crear h2{
@@ -66,19 +68,25 @@ header {
     gap: 10px;
 }
 
-.form-tarea input[type="text"]{
+.form-tarea input[type="text"], .form-tarea input[type="date"], .form-tarea textarea{
     flex:1;
     padding: 10px 14px;
     border:1px solid #e0d6cb;
     border-radius:6px;
-    font-size:1rem;
+    font-family: 'Patrick Hand', cursive;
+    color:#4a3e3d;
+    font-size:1.2rem;
     outline:none;
     background-color:#faf8f5;
     transition: border-color 0.3s;
 }
 
-.form-tarea input[type="text"]:focus {
+.form-tarea input[type="text"]:focus, .form-tarea input[type="date"]:focus, .form-tarea textarea:focus {
     border-color: #a89788;
+    color: #4a3e3d;
+}
+.form-tarea input[type="date"] {
+    color:#757575 ;
 }
 
 .form-tarea button{
