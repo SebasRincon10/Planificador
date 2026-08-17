@@ -42,15 +42,14 @@
                 required 
                 autocomplete="off"
             >
-            <input 
-                type="text" 
-                id="inputTarea" 
-                placeholder="Estado" 
-                required 
-                autocomplete="off"
-            >
-            <textarea id="inputTarea" placeholder="Descripción de la tarea..." required autocomplete="off">
-            </textarea>
+            <select aria-label="Estado" 
+                    id="prioridadtarea" 
+                    class="form-select">
+                <option selected disabled value="">Seleccione Estado...</option>
+                <option value="">Por Hacer</option>
+                <option value="">En Progreso</option>
+            </select>
+            <textarea id="inputTarea" placeholder="Descripción de la tarea..." required autocomplete="off"></textarea>
             <button type="submit" id="btnAgregar">Agregar</button>
         </form> 
     </section>
@@ -58,20 +57,83 @@
     <div class="contenedor-principal col-12 col-lg-8">
     <section class="seccion-lista">
         <h2>📋 Mis Pendientes</h2>
-        <ul id="listaTareas" class="lista-tareas">
-            <li class="tarea-item">
-                <label class="tarea-label">
-                    <input type="checkbox">
-                    <span class="texto-tarea">Revisar documentación del proyecto</span>
-                </label>
-            </li>
-            <li class="tarea-item">
-                <label class="tarea-label">
-                    <input type="checkbox">
-                    <span class="texto-tarea">Enviar reporte por correo</span>
-                </label>
-            </li>
-        </ul>
+        <div class="contenedor-postits">
+            <div class="postit">
+                <div class="postit-header">
+                    <span class="prioridad">Prioridad</span>
+                    <button class="btn-eliminar">&times</button>
+                </div>
+                <h5 class="titulo">Diseñar Prototipo</h5>
+                <p class="descripcion">Crear wireframes para la vista de tareas en Bootstrap.</p>
+                <div class="postit-estado">
+                    <small>Por Hacer</small>
+                </div>
+                <div class="postit-footer">
+                    <small><i class="bi bi-calendar3"></i> 20 Mar</small>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+            </div>
+            <div class="postit">
+                <div class="postit-header">
+                    <span class="prioridad">Prioridad</span>
+                    <button class="btn-eliminar">&times</button>
+                </div>
+                <h5 class="titulo">Diseñar Prototipo</h5>
+                <p class="descripcion">Crear wireframes para la vista de tareas en Bootstrap.</p>
+                <div class="postit-estado">
+                    <small>Por Hacer</small>
+                </div>
+                <div class="postit-footer">
+                    <small><i class="bi bi-calendar3"></i> 20 Mar</small>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+            </div>
+            <div class="postit">
+                <div class="postit-header">
+                    <span class="prioridad">Prioridad</span>
+                    <button class="btn-eliminar">&times</button>
+                </div>
+                <h5 class="titulo">Diseñar Prototipo</h5>
+                <p class="descripcion">Crear wireframes para la vista de tareas en Bootstrap.</p>
+                <div class="postit-estado">
+                    <small>Por Hacer</small>
+                </div>
+                <div class="postit-footer">
+                    <small><i class="bi bi-calendar3"></i> 20 Mar</small>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+            </div>
+            <div class="postit">
+                <div class="postit-header">
+                    <span class="prioridad">Prioridad</span>
+                    <button class="btn-eliminar">&times</button>
+                </div>
+                <h5 class="titulo">Diseñar Prototipo</h5>
+                <p class="descripcion">Crear wireframes para la vista de tareas en Bootstrap.</p>
+                <div class="postit-estado">
+                    <small>Por Hacer</small>
+                </div>
+                <div class="postit-footer">
+                    <small><i class="bi bi-calendar3"></i> 20 Mar</small>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+            </div>
+            <div class="postit">
+                <div class="postit-header">
+                    <span class="prioridad">Prioridad</span>
+                    <button class="btn-eliminar">&times</button>
+                </div>
+                <h5 class="titulo">Diseñar Prototipo</h5>
+                <p class="descripcion">Crear wireframes para la vista de tareas en Bootstrap.</p>
+                <div class="postit-estado">
+                    <small>Por Hacer</small>
+                </div>
+                <div class="postit-footer">
+                    <small><i class="bi bi-calendar3"></i> 20 Mar</small>
+                    <input type="checkbox" class="form-check-input">
+                </div>
+            </div>
+        </div>
     </section>
     </div>
     </div>
