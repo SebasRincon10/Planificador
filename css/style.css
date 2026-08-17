@@ -94,6 +94,21 @@ header {
 .form-tarea input[type="date"],.form-select {
     color:#757575 ;
 }
+.form-tarea input.is-invalid,
+.form-tarea textarea.is-invalid,
+.form-select.is-invalid,
+.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important;
+}
+
+    
+.form-tarea input.is-valid,
+.form-tarea textarea.is-valid,
+.form-select.is-valid,
+.is-valid {
+    border-color: #198754 !important;
+}
 
 
 .form-tarea button{

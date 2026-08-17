@@ -31,25 +31,27 @@
             <input 
                 type="text" 
                 id="inputTarea" 
-                placeholder="Escribe una tarea aquí..." 
-                required 
+                placeholder="Escribe una tarea aquí..."  
                 autocomplete="off"
             >
+            <div class="invalid-feedback">Ingresa Tarea!</div>
             <input 
                 type="date" 
-                id="inputTarea"     
+                id="inputTareaFecha"     
                 placeholder="Fecha de Entrega" 
-                required 
                 autocomplete="off"
             >
+            <div class="invalid-feedback">Ingresa Fecha!</div>
             <select aria-label="Estado" 
-                    id="prioridadtarea" 
+                    id="inputTareaEstado" 
                     class="form-select">
                 <option selected disabled value="">Seleccione Estado...</option>
-                <option value="">Por Hacer</option>
-                <option value="">En Progreso</option>
+                <option value="porHacer">Por Hacer</option>
+                <option value="enProgreso">En Progreso</option>
             </select>
-            <textarea id="inputTarea" placeholder="Descripción de la tarea..." required autocomplete="off"></textarea>
+            <div class="invalid-feedback">Ingresa Estado!</div>
+            <textarea id="inputTareaDescripcion" placeholder="Descripción de la tarea..." autocomplete="off"></textarea>
+            <div class="invalid-feedback">Ingresa Descripción!</div>
             <button type="submit" id="btnAgregar">Agregar</button>
         </form> 
     </section>
@@ -146,9 +148,10 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+<!-- SWEETALERT2 -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="app.js"></script>
 </body>
 </html>
