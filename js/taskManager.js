@@ -10,7 +10,7 @@ class TaskManager{
             tarea: tarea,
             descripcion: descripcion,
             fecha: fecha,
-            estado: 'PORHACER'
+            estado: 'porHacer'
         }; 
         this.tasks.push(nuevaTarea);
     }
