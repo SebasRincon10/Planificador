@@ -240,3 +240,23 @@ header {
     border-radius: 5px;
     padding: 1px 2px;
 }
+
+.btn-completar{
+    border:none;
+    border-radius: 5px;
+    padding: 5px 8px;
+    background-color: #7b9e87;
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    cursor: pointer;
+}
+
+.postit.completada{
+    background-color: #cfe8d3;
+    border-color: #9fc9a7;
+    opacity: 0.8;
+}
+.postit.completada .postit-estado small {
+    color: #198754;
+    border-color: #198754;
+}

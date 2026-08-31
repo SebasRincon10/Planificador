@@ -1,4 +1,5 @@
 
+const taskManager = new TaskManager();
 const formTarea= document.getElementById("formTarea");
 
 formTarea.addEventListener('submit', (event) => {
@@ -50,6 +51,13 @@ formTarea.addEventListener('submit', (event) => {
 Fecha:${data.fecha},
 Estado:${data.estado},
 Descripcion:${data.descripcion}`);
+taskManager.addTask(
+    data.tarea,
+    data.fecha,
+    data.descripcion
+);
+
+console.log(taskManager.tasks);
 Swal.fire({
         icon: "success",
         title: "¡Excelente!",
@@ -60,4 +68,22 @@ Swal.fire({
             campo.classList.remove("is-valid", "is-invalid");
         });
     });
+    
+})
+
+
+const btnCompletar=document.querySelectorAll(".btn-completar");
+btnCompletar.forEach((boton)=>{
+    boton.addEventListener("click",()=>{
+        const tarjeta=boton.closest(".postit");
+        const estado=tarjeta.querySelector(".postit-estado small");
+        tarjeta.classList.toggle("completada");
+        if(tarjeta.classList.contains("completada")){
+            boton.innerHTML='<i class="bi bi-hourglass-top"></i> Pendiente';
+            estado.textContent="Completada";
+        }else {
+            boton.innerHTML = '<i class="bi bi-check2-circle"></i> Completar';
+            estado.textContent = "Por Hacer";
+        }
+    })
 })
