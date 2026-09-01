@@ -17,7 +17,7 @@ class TaskManager {
         }
     }
 
-    addTask(tarea, fecha, descripcion) {
+    addTask(tarea, fecha, descripcion,estado) {
         this.currentId++;
 
         const nuevaTarea = {
@@ -25,7 +25,7 @@ class TaskManager {
             tarea: tarea,
             descripcion: descripcion,
             fecha: fecha,
-            estado: "POR HACER"
+            estado: estado
         };
 
         this.tasks.push(nuevaTarea);

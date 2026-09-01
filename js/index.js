@@ -1,6 +1,13 @@
 
 const taskManager = new TaskManager();
 const formTarea= document.getElementById("formTarea");
+const inputTareaFecha = document.getElementById("inputTareaFecha");
+
+const hoy = new Date();
+
+const fechaHoy = `${hoy.getFullYear()}-${String(hoy.getMonth() + 1).padStart(2, "0")}-${String(hoy.getDate()).padStart(2, "0")}`;
+
+inputTareaFecha.value = fechaHoy;
 //  AGREGAR LAS TAREAS AL TABLERO
 function mostrarTareas(){
     const contenedor= document.querySelector(".contenedor-postits");
@@ -82,7 +89,8 @@ Descripcion:${data.descripcion}`);
 taskManager.addTask(
     data.tarea,
     data.fecha,
-    data.descripcion
+    data.descripcion,
+    data.estado
 );
 localStorage.setItem("tasks", JSON.stringify(taskManager.tasks));
 mostrarTareas();
@@ -95,6 +103,7 @@ console.log(taskManager.tasks);
                 confirmButtonColor: '#7b9e87'
             }).then(() => {
                 formTarea.reset();
+                inputTareaFecha.value = fechaHoy;
                 [inputTarea, inputTareaFecha, inputTareaEstado, inputTareaDescripcion].forEach(campo => {
                     campo.classList.remove("is-valid", "is-invalid");
                 });
