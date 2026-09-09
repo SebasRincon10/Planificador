@@ -23,15 +23,18 @@ function mostrarTareas(){
                     <p class="descripcion">${task.descripcion}.</p>
                     <p></p>
                     <small><i class="bi bi-calendar3"></i> ${task.fecha}</small>   
-                <div class="postit-estado ${claseEstado}">
+                    <div class="postit-estado ${claseEstado}">
                     <small><i class="bi bi-calendar3"></i> ${task.estado}</small>
-                </div>
+                    </div>
+                    <button class="done-button btn btn-success">
+                    Done
+                    </button>
                 <div class="postit-footer">
                     <button class="btn-completar" type="button" aria-pressed="true">${
         claseEstado==="completada"
             ? `<i class="bi bi-hourglass-top"></i> Pendiente`
             : `<i class="bi bi-check2-circle"></i> Completar`
-    }</button>
+                }</button>
                     <button class="delete-button" type="button" aria-pressed="true">&times Eliminar</button>
                 </div>
                 </div>`
@@ -129,6 +132,19 @@ contenedorPostits.addEventListener("click", (event) => {
 
         return;
     }
+
+    const botonDone= event.target.closest(".done-button");
+    if(botonDone){
+        const tarjeta = botonDone.closest(".postit");
+        const id = Number(tarjeta.dataset.id);
+        console.log(tarjeta);
+        const tarea = taskManager.tasks.find((task) => task.id === id);
+        if(tarea){
+            tarea.estado ="DONE";
+            localStorage.setItem("tasks", JSON.stringify(taskManager.tasks));}
+        mostrarTareas();
+    }    
+
 
     const botonCompletar = event.target.closest(".btn-completar");
 
